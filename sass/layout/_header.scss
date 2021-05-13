@@ -1,0 +1,122 @@
+.header {    
+    padding-top: 25px;
+    padding-bottom: 25px;    
+    margin: 0 auto;    
+    border-bottom: 1px solid #ECECEC; 
+}
+
+.navigation {
+    display: flex;    
+    align-items: center;     
+}
+
+.header__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__nav {
+    display: flex;    
+}
+
+.menu__item {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.current {
+
+    &.menu__link {
+        color: var(--link-color);
+    }
+    
+    &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: var(--link-color);
+        border-radius: 2px;
+        bottom: -32px;   
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    margin-right: 94px;
+}
+
+.logo {
+    font-family: Raleway;
+    color: var(--title-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+.logo2 {
+    font-family: Raleway;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+.logo__part {
+    color: var(--link-color);
+}
+
+.menu__link {
+    color: var(--title-color); 
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+
+    &:hover,
+    &:focus {
+    color: var(--link-color);    
+    }
+}
+
+.link {
+    color: var(--text-color); 
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+    color: var(--link-color);    
+    }
+}
+
+.contact__menu-icon {
+    width: 16px;
+    height: 10px;
+    fill: var(--text-color);
+    margin-right: 10px;
+
+    .link:hover &,
+    .link:focus & {
+    fill: var(--link-color);
+    }
+}
