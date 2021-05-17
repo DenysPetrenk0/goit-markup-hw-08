@@ -165,12 +165,11 @@ ul {
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
+    z-index: 2;
     top: 50%;
     left: 50%;
     width: 100%;
-    max-width: 480px;
     height: 100%;
-    max-height: 796px;
     transform: translate(-50%, -50%) scale(0.1);
     padding: 48px 40px;
     opacity: 0;
@@ -325,8 +324,10 @@ ul {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  max-height: 609px;
   background-color: #ffffff;
   padding: 40px;
   transition: transform 250ms;
@@ -338,7 +339,9 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .modal {
+    width: 100%;
     width: 528px;
+    height: 100%;
     height: 580px;
   }
 }
@@ -729,6 +732,12 @@ ul {
   color: var(--text-color);
 }
 
+@media screen and (min-width: 480px) {
+  .adv__item {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .adv__item {
     flex-basis: calc((100% - 60px) / 2);
@@ -740,6 +749,7 @@ ul {
   .adv__item {
     flex-basis: calc((100% - 90px) / 4);
     margin-left: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -1125,6 +1135,9 @@ ul {
     flex-wrap: wrap;
     margin: 0 auto;
   }
+  .cat__item {
+    margin-bottom: 30px;
+  }
   .cat__item:hover, .cat__item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
@@ -1176,7 +1189,7 @@ ul {
   }
 }
 
-.portfolio__hero__item:not(:last-child):not(:last-child) {
+.portfolio__hero__item:not(:last-child) {
   margin-right: 8px;
 }
 
